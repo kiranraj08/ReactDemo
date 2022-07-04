@@ -21,7 +21,7 @@ function Call() {
 
   const canvasRef = useRef<HTMLCanvasElement>(null);
   console.log(canvasRef);
-  const ctx = canvasRef.current!.getContext("2d");
+  const ctx = canvasRef.current?.getContext("2d");
 
   function drawImage() {
     ctx?.fillText("Welcome to agora", 900, 900);
@@ -44,7 +44,7 @@ function Call() {
 
   return (
     <>
-      {/* <div className="call">
+      <div className="call">
         <form className="call-form">
           <label>
             AppID:
@@ -122,7 +122,7 @@ function Call() {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
       <canvas ref={canvasRef}></canvas>
     </>
   );
